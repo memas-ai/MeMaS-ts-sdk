@@ -1,0 +1,13 @@
+.gitignore
+.openapi-generator-ignore
+api.ts
+api/apis.ts
+api/cpApi.ts
+git_push.sh
+model/corpusType.ts
+model/createCorpusRequest.ts
+model/createUser200Response.ts
+model/createUserRequest.ts
+model/models.ts
+package.json
+tsconfig.json
