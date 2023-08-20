@@ -1,7 +1,7 @@
 {
     "name": "memas-sdk",
-    "version": "0.1.0",
-    "description": "NodeJS client for memas-sdk",
+    "version": "0.1.1",
+    "description": "NodeJS Data Plane client for MeMaS (Memory Management Service)",
     "repository": {
         "type": "git",
         "url": "https://github.com/memas-ai/MeMaS-ts-sdk.git"

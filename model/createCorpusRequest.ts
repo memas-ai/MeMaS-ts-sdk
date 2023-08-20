@@ -1,6 +1,6 @@
 /**
  * MeMaS CP APIs
- * This is the Control Plane APIs for MeMaS (Memory Management Service).
+ * This is the Control Plane client for MeMaS (Memory Management Service).  See https://github.com/memas-ai/MeMaS for more details.
  *
  * The version of the OpenAPI document: 0.1.0
  * Contact: max.yu@memas.ai
@@ -17,8 +17,8 @@ export class CreateCorpusRequest {
     /**
     * full corpus name
     */
-    'corpusPathname'?: string;
-    'corpusType'?: CorpusType;
+    'corpusPathname': string;
+    'corpusType': CorpusType;
 
     static discriminator: string | undefined = undefined;
 
