@@ -3,7 +3,11 @@ import localVarRequest from 'request';
 export * from './corpusType';
 export * from './createCorpusRequest';
 export * from './createUser200Response';
+export * from './createUser400Response';
 export * from './createUserRequest';
+export * from './namespaceDoesNotExistError';
+export * from './namespaceExistError';
+export * from './namespaceIllegalNameError';
 
 import * as fs from 'fs';
 
@@ -21,7 +25,11 @@ export type RequestFile = string | Buffer | fs.ReadStream | RequestDetailedFile;
 import { CorpusType } from './corpusType';
 import { CreateCorpusRequest } from './createCorpusRequest';
 import { CreateUser200Response } from './createUser200Response';
+import { CreateUser400Response } from './createUser400Response';
 import { CreateUserRequest } from './createUserRequest';
+import { NamespaceDoesNotExistError } from './namespaceDoesNotExistError';
+import { NamespaceExistError } from './namespaceExistError';
+import { NamespaceIllegalNameError } from './namespaceIllegalNameError';
 
 /* tslint:disable:no-unused-variable */
 let primitives = [
@@ -37,12 +45,20 @@ let primitives = [
 
 let enumsMap: {[index: string]: any} = {
         "CorpusType": CorpusType,
+        "CreateUser400Response.ErrorCodeEnum": CreateUser400Response.ErrorCodeEnum,
+        "NamespaceDoesNotExistError.ErrorCodeEnum": NamespaceDoesNotExistError.ErrorCodeEnum,
+        "NamespaceExistError.ErrorCodeEnum": NamespaceExistError.ErrorCodeEnum,
+        "NamespaceIllegalNameError.ErrorCodeEnum": NamespaceIllegalNameError.ErrorCodeEnum,
 }
 
 let typeMap: {[index: string]: any} = {
     "CreateCorpusRequest": CreateCorpusRequest,
     "CreateUser200Response": CreateUser200Response,
+    "CreateUser400Response": CreateUser400Response,
     "CreateUserRequest": CreateUserRequest,
+    "NamespaceDoesNotExistError": NamespaceDoesNotExistError,
+    "NamespaceExistError": NamespaceExistError,
+    "NamespaceIllegalNameError": NamespaceIllegalNameError,
 }
 
 export class ObjectSerializer {

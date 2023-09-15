@@ -6,6 +6,10 @@ git_push.sh
 model/corpusType.ts
 model/createCorpusRequest.ts
 model/createUser200Response.ts
+model/createUser400Response.ts
 model/createUserRequest.ts
 model/models.ts
+model/namespaceDoesNotExistError.ts
+model/namespaceExistError.ts
+model/namespaceIllegalNameError.ts
 tsconfig.json

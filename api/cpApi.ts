@@ -17,6 +17,7 @@ import http from 'http';
 /* tslint:disable:no-unused-locals */
 import { CreateCorpusRequest } from '../model/createCorpusRequest';
 import { CreateUser200Response } from '../model/createUser200Response';
+import { CreateUser400Response } from '../model/createUser400Response';
 import { CreateUserRequest } from '../model/createUserRequest';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
