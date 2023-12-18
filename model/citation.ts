@@ -12,23 +12,38 @@
 
 import { RequestFile } from './models';
 
-export class CreateUserRequest {
-    /**
-    * Full namespace name, where child namespaces are appended after their parents\' names with \'.\'
-    */
-    'namespacePathname': string;
+export class Citation {
+    'sourceUri'?: string;
+    'sourceName'?: string;
+    'documentName'?: string;
+    'description'?: string;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "namespacePathname",
-            "baseName": "namespace_pathname",
+            "name": "sourceUri",
+            "baseName": "source_uri",
+            "type": "string"
+        },
+        {
+            "name": "sourceName",
+            "baseName": "source_name",
+            "type": "string"
+        },
+        {
+            "name": "documentName",
+            "baseName": "document_name",
+            "type": "string"
+        },
+        {
+            "name": "description",
+            "baseName": "description",
             "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
-        return CreateUserRequest.attributeTypeMap;
+        return Citation.attributeTypeMap;
     }
 }
 

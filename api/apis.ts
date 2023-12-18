@@ -1,5 +1,7 @@
 export * from './cpApi';
 import { CpApi } from './cpApi';
+export * from './dpApi';
+import { DpApi } from './dpApi';
 import * as http from 'http';
 
 export class HttpError extends Error {
@@ -11,4 +13,4 @@ export class HttpError extends Error {
 
 export { RequestFile } from '../model/models';
 
-export const APIS = [CpApi];
+export const APIS = [CpApi, DpApi];

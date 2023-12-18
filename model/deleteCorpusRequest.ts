@@ -12,11 +12,15 @@
 
 import { RequestFile } from './models';
 
-export class CreateUserRequest {
+export class DeleteCorpusRequest {
     /**
     * Full namespace name, where child namespaces are appended after their parents\' names with \'.\'
     */
     'namespacePathname': string;
+    /**
+    * Full name of a corpus, specifying which namespace the corpus is under.  The name takes on the format of \\\"<namespace_pathname>:<corpus_name>\\\"
+    */
+    'corpusPathname': string;
 
     static discriminator: string | undefined = undefined;
 
@@ -25,10 +29,15 @@ export class CreateUserRequest {
             "name": "namespacePathname",
             "baseName": "namespace_pathname",
             "type": "string"
+        },
+        {
+            "name": "corpusPathname",
+            "baseName": "corpus_pathname",
+            "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
-        return CreateUserRequest.attributeTypeMap;
+        return DeleteCorpusRequest.attributeTypeMap;
     }
 }
 

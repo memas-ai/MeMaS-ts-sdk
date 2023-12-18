@@ -1,13 +1,20 @@
 import localVarRequest from 'request';
 
+export * from './citation';
+export * from './citedDocument';
 export * from './corpusType';
 export * from './createCorpusRequest';
-export * from './createUser200Response';
 export * from './createUser400Response';
 export * from './createUserRequest';
+export * from './deleteCorpusRequest';
+export * from './memorize200Response';
+export * from './memorize400Response';
+export * from './memorizeRequest';
+export * from './memorizeRequestAllOf';
 export * from './namespaceDoesNotExistError';
 export * from './namespaceExistError';
 export * from './namespaceIllegalNameError';
+export * from './recallRequest';
 
 import * as fs from 'fs';
 
@@ -22,14 +29,21 @@ export interface RequestDetailedFile {
 export type RequestFile = string | Buffer | fs.ReadStream | RequestDetailedFile;
 
 
+import { Citation } from './citation';
+import { CitedDocument } from './citedDocument';
 import { CorpusType } from './corpusType';
 import { CreateCorpusRequest } from './createCorpusRequest';
-import { CreateUser200Response } from './createUser200Response';
 import { CreateUser400Response } from './createUser400Response';
 import { CreateUserRequest } from './createUserRequest';
+import { DeleteCorpusRequest } from './deleteCorpusRequest';
+import { Memorize200Response } from './memorize200Response';
+import { Memorize400Response } from './memorize400Response';
+import { MemorizeRequest } from './memorizeRequest';
+import { MemorizeRequestAllOf } from './memorizeRequestAllOf';
 import { NamespaceDoesNotExistError } from './namespaceDoesNotExistError';
 import { NamespaceExistError } from './namespaceExistError';
 import { NamespaceIllegalNameError } from './namespaceIllegalNameError';
+import { RecallRequest } from './recallRequest';
 
 /* tslint:disable:no-unused-variable */
 let primitives = [
@@ -46,19 +60,27 @@ let primitives = [
 let enumsMap: {[index: string]: any} = {
         "CorpusType": CorpusType,
         "CreateUser400Response.ErrorCodeEnum": CreateUser400Response.ErrorCodeEnum,
+        "Memorize400Response.ErrorCodeEnum": Memorize400Response.ErrorCodeEnum,
         "NamespaceDoesNotExistError.ErrorCodeEnum": NamespaceDoesNotExistError.ErrorCodeEnum,
         "NamespaceExistError.ErrorCodeEnum": NamespaceExistError.ErrorCodeEnum,
         "NamespaceIllegalNameError.ErrorCodeEnum": NamespaceIllegalNameError.ErrorCodeEnum,
 }
 
 let typeMap: {[index: string]: any} = {
+    "Citation": Citation,
+    "CitedDocument": CitedDocument,
     "CreateCorpusRequest": CreateCorpusRequest,
-    "CreateUser200Response": CreateUser200Response,
     "CreateUser400Response": CreateUser400Response,
     "CreateUserRequest": CreateUserRequest,
+    "DeleteCorpusRequest": DeleteCorpusRequest,
+    "Memorize200Response": Memorize200Response,
+    "Memorize400Response": Memorize400Response,
+    "MemorizeRequest": MemorizeRequest,
+    "MemorizeRequestAllOf": MemorizeRequestAllOf,
     "NamespaceDoesNotExistError": NamespaceDoesNotExistError,
     "NamespaceExistError": NamespaceExistError,
     "NamespaceIllegalNameError": NamespaceIllegalNameError,
+    "RecallRequest": RecallRequest,
 }
 
 export class ObjectSerializer {

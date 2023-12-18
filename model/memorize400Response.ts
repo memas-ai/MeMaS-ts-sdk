@@ -11,12 +11,11 @@
  */
 
 import { RequestFile } from './models';
+import { NamespaceDoesNotExistError } from './namespaceDoesNotExistError';
+import { NamespaceIllegalNameError } from './namespaceIllegalNameError';
 
-/**
-* Error returned when the namespace name format/style is not allowed
-*/
-export class NamespaceIllegalNameError {
-    'errorCode': NamespaceIllegalNameError.ErrorCodeEnum;
+export class Memorize400Response {
+    'errorCode': Memorize400Response.ErrorCodeEnum;
     'msg': string;
     'details'?: string;
 
@@ -26,7 +25,7 @@ export class NamespaceIllegalNameError {
         {
             "name": "errorCode",
             "baseName": "error_code",
-            "type": "NamespaceIllegalNameError.ErrorCodeEnum"
+            "type": "Memorize400Response.ErrorCodeEnum"
         },
         {
             "name": "msg",
@@ -40,11 +39,11 @@ export class NamespaceIllegalNameError {
         }    ];
 
     static getAttributeTypeMap() {
-        return NamespaceIllegalNameError.attributeTypeMap;
+        return Memorize400Response.attributeTypeMap;
     }
 }
 
-export namespace NamespaceIllegalNameError {
+export namespace Memorize400Response {
     export enum ErrorCodeEnum {
         NamespaceIllegalName = <any> 'namespace_illegal_name'
     }

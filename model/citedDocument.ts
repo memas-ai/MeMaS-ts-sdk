@@ -11,24 +11,28 @@
  */
 
 import { RequestFile } from './models';
+import { Citation } from './citation';
 
-export class CreateUserRequest {
-    /**
-    * Full namespace name, where child namespaces are appended after their parents\' names with \'.\'
-    */
-    'namespacePathname': string;
+export class CitedDocument {
+    'document': string;
+    'citation': Citation;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "namespacePathname",
-            "baseName": "namespace_pathname",
+            "name": "document",
+            "baseName": "document",
             "type": "string"
+        },
+        {
+            "name": "citation",
+            "baseName": "citation",
+            "type": "Citation"
         }    ];
 
     static getAttributeTypeMap() {
-        return CreateUserRequest.attributeTypeMap;
+        return CitedDocument.attributeTypeMap;
     }
 }
 

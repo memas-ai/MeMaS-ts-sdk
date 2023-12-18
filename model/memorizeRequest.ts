@@ -11,24 +11,37 @@
  */
 
 import { RequestFile } from './models';
+import { Citation } from './citation';
 
-export class CreateUserRequest {
+export class MemorizeRequest {
+    'document': string;
+    'citation': Citation;
     /**
-    * Full namespace name, where child namespaces are appended after their parents\' names with \'.\'
+    * Full name of a corpus, specifying which namespace the corpus is under.  The name takes on the format of \\\"<namespace_pathname>:<corpus_name>\\\"
     */
-    'namespacePathname': string;
+    'corpusPathname'?: string;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "namespacePathname",
-            "baseName": "namespace_pathname",
+            "name": "document",
+            "baseName": "document",
+            "type": "string"
+        },
+        {
+            "name": "citation",
+            "baseName": "citation",
+            "type": "Citation"
+        },
+        {
+            "name": "corpusPathname",
+            "baseName": "corpus_pathname",
             "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
-        return CreateUserRequest.attributeTypeMap;
+        return MemorizeRequest.attributeTypeMap;
     }
 }
 
